@@ -1,0 +1,24 @@
+# Skompilowane pliki Rust / Solana BPF
+target/
+**/*.rs.bk
+
+# Zależności Node.js
+node_modules/
+
+# Pliki środowiska Anchor (lokalny ledger i cache)
+.anchor/
+test-ledger/
+
+# Zmienne środowiskowe i klucze (ZABEZPIECZENIE!)
+.env
+*-keypair.json
+*.pem
+
+# Logi błędów
+yarn-error.log
+npm-debug.log*
+
+# Pliki systemowe (np. z macOS)
+.DS_Store
+
+workspace/*
