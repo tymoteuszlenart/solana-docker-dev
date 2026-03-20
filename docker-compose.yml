@@ -3,6 +3,7 @@ version: "3.9"
 services:
 
   solana-dev:
+    platform: linux/amd64
     build: .
     container_name: solana-dev
     network_mode: service:validator
@@ -10,18 +11,21 @@ services:
       - ./workspace:/workspace
       - cargo-cache:/root/.cargo
       - target-cache:/workspace/target
+      - ~/.config/solana:/root/.config/solana
     stdin_open: true
     tty: true
+    command: bash
 
   validator:
+    platform: linux/amd64
     build: .
     container_name: solana-validator
-    command: solana-test-validator --reset
     volumes:
       - validator-ledger:/workspace/test-ledger
     ports:
       - "8900:8899"
       - "8901:8900"
+    command: solana-test-validator --reset
 
 volumes:
   cargo-cache:
