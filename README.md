@@ -10,7 +10,7 @@ Originally designed as a fast setup for legacy macOS systems, this environment i
 * Auto-Airdrop: Gives you 100 SOL automatically every time you start the network.
 * Persistent Wallet: Your `.config/solana` directory is mapped to your host machine, meaning you keep the same public key even if you destroy the containers.
 * Dual-Container Architecture: Keeps the noisy `solana-test-validator` logs separate from your development workspace.
-* Pre-installed Stack: Includes Debian 12 (Bookworm), Node.js 24, Yarn, Rust, Solana CLI (Anza release), and the latest Anchor AVM.
+* Pre-installed Stack: Includes Ubuntu 24.04 (required for GLIBC_2.39), Node.js 24, Yarn, Rust, Solana CLI (Anza release), and the latest Anchor AVM.
 
 ---
 
